@@ -20,7 +20,12 @@ jobs:
                     <server>
                       <id>github-ilink-service</id>
                       <username>Tinhhhh</username>
-                      <password>${{ secrets.JAVA_TOKEN }}</password>
+                      <password>${{ secrets.JAVA_TOKEN_SERVICE}}</password>
+                    </server>
+                    <server>
+                      <id>github-kgrill-model</id>
+                      <username>taikt08s</username>
+                      <password>${{ secrets.JAVA_TOKEN_MODEL}}</password>
                     </server>
                   </servers>
                 </settings>" > ~/.m2/settings.xml
