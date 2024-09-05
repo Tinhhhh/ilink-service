@@ -1,4 +1,14 @@
-package com.exe201.ilink_service.dto;
+package com.exe201.ilink_service.dto.request;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Schema()
 public class RegistrationRequest {
 }

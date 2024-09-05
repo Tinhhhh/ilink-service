@@ -1,2 +1,5 @@
-package com.exe201.ilink_service.service;public interface AuthnService {
+package com.exe201.ilink_service.service;
+
+public interface AuthnService {
+    void register
 }

@@ -1,0 +1,30 @@
+name: Publish package to GitHub Packages
+on: push
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'corretto'
+      - name: Configure Maven settings
+        run: |
+          mkdir -p ~/.m2
+          echo "<settings>
+                  <servers>
+                    <server>
+                      <id>github-ilink-service</id>
+                      <username>Tinhhhh</username>
+                      <password>${{ secrets.JAVA_TOKEN }}</password>
+                    </server>
+                  </servers>
+                </settings>" > ~/.m2/settings.xml
+      - name: Publish package
+        run: |
+          mvn clean install -DskipTests
+          mvn --batch-mode deploy -DskipTests

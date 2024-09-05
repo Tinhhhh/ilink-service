@@ -1,11 +1,11 @@
-package com.exe201.ilinkservice.service.Impl;
+package com.exe201.ilink_service.service.Impl;
 
-import com.exe201.ilinkservice.service.AccountService;
+import com.exe201.ilink_model.repository.AccountRepository;
+import com.exe201.ilink_service.service.AccountService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import com.exe201.ilinkservice.repository.AccountRepository;
 
 @Service
 @RequiredArgsConstructor
