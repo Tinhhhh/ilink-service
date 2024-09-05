@@ -29,7 +29,5 @@ jobs:
                     </server>
                   </servers>
                 </settings>" > ~/.m2/settings.xml
-      - name: Publish package
-        run: |
-          mvn clean install -DskipTests
-          mvn --batch-mode deploy -DskipTests 
+      - name: Build and deploy the package
+        run: mvn --batch-mode deploy -X
