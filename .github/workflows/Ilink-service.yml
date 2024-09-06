@@ -22,10 +22,10 @@ jobs:
                       <username>Tinhhhh</username>
                       <password>${{ secrets.JAVA_TOKEN_SERVICE}}</password>
                     </server>
-                    <server>
-                      <id>github-kgrill-model</id>
-                      <username>taikt08s</username>
-                      <password>${{ secrets.JAVA_TOKEN_MODEL}}</password>
+                     <server>
+                      <id>github-ilink-model</id>
+                      <username>Tinhhhh</username>
+                      <password>${{ secrets.JAVA_TOKEN_MODEL }}</password>
                     </server>
                   </servers>
                 </settings>" > ~/.m2/settings.xml
